@@ -3,6 +3,7 @@ import numpy as np
 from flask import Flask, request, render_template
 from keras.models import load_model
 import librosa
+import distutils
 
 app = Flask(__name__, template_folder='Template', static_folder='static')
 
@@ -11,7 +12,7 @@ def stretch(data, rate):
     return data
 
 
-gru_model = load_model('C:\Binus\Semester 4\Software engineering\AoL_2\PKM-KC_real (1)\PKM-KC_real\Prototype\gru_model.h5')
+gru_model = load_model('C:/Binus/Semester 4/Software engineering/AoL_2/PKM-KC_real (1)/PKM-KC_real/Prototype/gru_model.h5')
 
 classes = ["COPD", "Bronchiolitis", "Pneumonia", "URTI", "Healthy"]
 
