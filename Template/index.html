@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Disease Diagnosis</title>
+</head>
+<body>
+    <h1>Respiratory Disease Diagnosis</h1>
+    <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+        <label for="audioFile">Upload Audio File:</label>
+        <input type="file" name="audioFile" accept=".wav, .mp3" required>
+        <br>
+        <button type="submit">Diagnose</button>
+    </form>
+</body>
+</html>
